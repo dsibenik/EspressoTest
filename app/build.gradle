@@ -29,7 +29,6 @@ dependencies {
 
     // compile 'com.github.dsibenik:WaveformSeekBar:0.1@aar'
 
-    classpath 'com.android.tools.build:gradle:0.12.+'
 
     androidTestCompile files('libs/espresso.jar')
 
