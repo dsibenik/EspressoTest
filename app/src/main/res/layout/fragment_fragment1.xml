@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <Button
+        android:id="@+id/donotpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do not press"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@android:drawable/ic_delete"
+        android:drawableRight="@android:drawable/ic_delete" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Activity"
+        android:id="@+id/nextactivity"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/btn_radio"
+        android:layout_below="@+id/donotpress"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

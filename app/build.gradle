@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.+'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
+apply plugin: 'android'
+
+repositories{
+    mavenCentral()
+    maven {
+        url "https://repository-partnerdemo.forge.cloudbees.com/release/"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('src/main/java/lib/espresso.jar')
+
+    // compile 'com.github.dsibenik:WaveformSeekBar:0.1@aar'
+
+    classpath 'com.android.tools.build:gradle:0.12.+'
+
+    androidTestCompile files('libs/espresso.jar')
+
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support:support-v4:13.0.0'
+    compile 'com.google.android.gms:play-services:3.1.36'
+    compile 'com.google.android.gcm:gcm-client:3'
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.dsibenik.espressotest"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
