@@ -40,13 +40,13 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "20.0.0"
+    compileSdkVersion 18
+    buildToolsVersion "18.0.0"
 
     defaultConfig {
         applicationId "com.dsibenik.espressotest"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 18
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
