@@ -54,11 +54,6 @@ public  class Fragment1 extends Fragment {
     }
 
 
-    public void updateFragment1(int arg){
-        k=arg;
-    }
-
-
     public void showToast(String text){
         Toast.makeText(getActivity(), text+j, Toast.LENGTH_SHORT).show();
     }
