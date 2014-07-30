@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="espresso">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/java/lib/espresso.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
