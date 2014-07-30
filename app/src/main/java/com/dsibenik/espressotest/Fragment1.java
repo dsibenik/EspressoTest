@@ -19,7 +19,7 @@ public  class Fragment1 extends Fragment {
     Button donotpress;
     ImageButton nextactivity;
 
-    String text = "Do not press! ";
+    String text = "Do not press!";
     int k = 2;
     int j = 0;
 
