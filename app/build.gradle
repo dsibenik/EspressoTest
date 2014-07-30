@@ -14,14 +14,6 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
 
-apply plugin: 'android'
-
-repositories{
-    mavenCentral()
-    maven {
-        url "https://repository-partnerdemo.forge.cloudbees.com/release/"
-    }
-}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -31,12 +23,7 @@ dependencies {
 
 
     //androidTestCompile files('libs/espresso.jar')
-    androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.3.1'
 
-    compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.android.support:support-v4:13.0.0'
-    compile 'com.google.android.gms:play-services:3.1.36'
-    compile 'com.google.android.gcm:gcm-client:3'
 }
 
 android {
@@ -57,20 +44,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-        // Standalone AndroidTestCase tests
-        // Do not require Gasp! server integration
-        base {
-        }
 
-        // Integration tests (AndroidTestCase, InstrumentationTestCase, ServiceTestCase)
-        // Requires Gasp! server
-        integration {
-
-        }
-        // ActivityInstrumentationTestCase2 and Robotium tests
-        // Requires Gasp! server
-        full {
-        }
-    }
 }
