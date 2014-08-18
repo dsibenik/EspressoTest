@@ -30,6 +30,7 @@ android {
     compileSdkVersion 19
     buildToolsVersion "20.0.0"
 
+
     defaultConfig {
         applicationId "com.dsibenik.espressotest"
         minSdkVersion 14
@@ -38,6 +39,8 @@ android {
         versionName "1.0"
         testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
     }
+
+
     buildTypes {
         release {
             runProguard false
